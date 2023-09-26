@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "k6IHcDVBC98PUrDJA789qsg5HC+t31rFlbB/Bby3fWc=",
+  "Source": "apicemig",
+  "BasePath": "_content/apicemig",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
