@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace apicemig.Data;
 
-//Representação do banco em memória.
+//Representação do banco em memória
 public class AppDbContext : DbContext
 {
 
