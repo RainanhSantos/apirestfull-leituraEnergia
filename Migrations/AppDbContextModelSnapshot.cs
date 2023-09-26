@@ -150,8 +150,8 @@ namespace apicemig.Migrations
                         .HasMaxLength(8)
                         .HasColumnType("varchar(8)");
 
-                    b.Property<int>("ValorTotal")
-                        .HasColumnType("int");
+                    b.Property<decimal>("ValorTotal")
+                        .HasColumnType("decimal(65,30)");
 
                     b.HasKey("Id");
 
@@ -218,8 +218,8 @@ namespace apicemig.Migrations
                     b.Property<int>("FaturaId")
                         .HasColumnType("int");
 
-                    b.Property<int>("ValorPago")
-                        .HasColumnType("int");
+                    b.Property<decimal>("ValorPago")
+                        .HasColumnType("decimal(65,30)");
 
                     b.HasKey("Id");
 

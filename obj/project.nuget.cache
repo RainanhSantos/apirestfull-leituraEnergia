@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "UYgsxChaEoHot+27VYrPoB3Dl4VplO369Rk4FaZwQJIH1Mpu8Zcpy42Ur1m3WSNCUl8lldUNpC8znxsllcJT6A==",
+  "dgSpecHash": "dnNzGkHx99xhBWHLA/0uQg8zdMh0xSbYfL1aTLvweK1e5xfZ6dsR4zKTc6wCr+Lkoc/oEvZO9easyRWq6hWp2Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\raina\\OneDrive\\areadetrabalho\\apicemig\\apicemig.csproj",
+  "projectFilePath": "C:\\Users\\raina\\OneDrive\\areadetrabalho\\apigerenciamentocontrato\\apicemig.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\raina\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\raina\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.5\\microsoft.aspnetcore.openapi.7.0.5.nupkg.sha512",

@@ -1442,11 +1442,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\raina\\OneDrive\\areadetrabalho\\apicemig\\apicemig.csproj",
+      "projectUniqueName": "C:\\Users\\raina\\OneDrive\\areadetrabalho\\apigerenciamentocontrato\\apicemig.csproj",
       "projectName": "apicemig",
-      "projectPath": "C:\\Users\\raina\\OneDrive\\areadetrabalho\\apicemig\\apicemig.csproj",
+      "projectPath": "C:\\Users\\raina\\OneDrive\\areadetrabalho\\apigerenciamentocontrato\\apicemig.csproj",
       "packagesPath": "C:\\Users\\raina\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\raina\\OneDrive\\areadetrabalho\\apicemig\\obj\\",
+      "outputPath": "C:\\Users\\raina\\OneDrive\\areadetrabalho\\apigerenciamentocontrato\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

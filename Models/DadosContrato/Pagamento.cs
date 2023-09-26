@@ -16,7 +16,7 @@ public class Pagamento
     public DateTime DataPagamento { get; set; }
 
     [Required(ErrorMessage = "O valor pago na fatura é obrigatório")]
-    public int ValorPago { get; set; }
+    public decimal ValorPago { get; set; }
     public int FaturaId { get; set; }
     public virtual Fatura Fatura { get; set; }
 }

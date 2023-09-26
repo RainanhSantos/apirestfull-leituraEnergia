@@ -11,8 +11,8 @@ using apicemig.Data;
 namespace apicemig.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20230926181557_fist")]
-    partial class fist
+    [Migration("20230926222328_first")]
+    partial class first
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -153,8 +153,8 @@ namespace apicemig.Migrations
                         .HasMaxLength(8)
                         .HasColumnType("varchar(8)");
 
-                    b.Property<int>("ValorTotal")
-                        .HasColumnType("int");
+                    b.Property<decimal>("ValorTotal")
+                        .HasColumnType("decimal(65,30)");
 
                     b.HasKey("Id");
 
@@ -221,8 +221,8 @@ namespace apicemig.Migrations
                     b.Property<int>("FaturaId")
                         .HasColumnType("int");
 
-                    b.Property<int>("ValorPago")
-                        .HasColumnType("int");
+                    b.Property<decimal>("ValorPago")
+                        .HasColumnType("decimal(65,30)");
 
                     b.HasKey("Id");
 

@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace apicemig.Migrations
 {
     /// <inheritdoc />
-    public partial class fist : Migration
+    public partial class first : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -159,7 +159,7 @@ namespace apicemig.Migrations
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     DataEmissao = table.Column<DateTime>(type: "datetime(6)", nullable: false),
                     DataVencimento = table.Column<DateTime>(type: "datetime(6)", nullable: false),
-                    ValorTotal = table.Column<int>(type: "int", nullable: false),
+                    ValorTotal = table.Column<decimal>(type: "decimal(65,30)", nullable: false),
                     StatusFatura = table.Column<string>(type: "varchar(8)", maxLength: 8, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     ContratoId = table.Column<int>(type: "int", nullable: false)
@@ -183,7 +183,7 @@ namespace apicemig.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     DataPagamento = table.Column<DateTime>(type: "datetime(6)", nullable: false),
-                    ValorPago = table.Column<int>(type: "int", nullable: false),
+                    ValorPago = table.Column<decimal>(type: "decimal(65,30)", nullable: false),
                     FaturaId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
