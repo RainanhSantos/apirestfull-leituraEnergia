@@ -17,7 +17,7 @@ namespace apicemig.Models
         
         [Required(ErrorMessage = "O nome é obrigatório")]
         [MaxLength(60, ErrorMessage = "Limite de caracteres excedido")]
-        public string? Nome { get; set; }
+        public string Nome { get; set; }
 
         [Required(ErrorMessage = "O CPF é obrigatório")]
         [MaxLength(11, ErrorMessage = "O CPF é inválido")]

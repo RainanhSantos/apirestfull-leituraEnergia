@@ -16,7 +16,7 @@ namespace apicemig.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "7.0.11")
+                .HasAnnotation("ProductVersion", "7.0.12")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
             modelBuilder.Entity("apicemig.Models.Cliente", b =>
@@ -64,7 +64,7 @@ namespace apicemig.Migrations
 
                     b.HasIndex("EnderecoId");
 
-                    b.ToTable("ContatoClientes");
+                    b.ToTable("Contatos");
                 });
 
             modelBuilder.Entity("apicemig.Models.DadosCliente.Endereco", b =>
@@ -92,7 +92,7 @@ namespace apicemig.Migrations
 
             modelBuilder.Entity("apicemig.Models.DadosContrato.Contrato", b =>
                 {
-                    b.Property<int>("MyProperty")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
@@ -118,9 +118,9 @@ namespace apicemig.Migrations
 
                     b.Property<string>("TipoContrato")
                         .IsRequired()
-                        .HasColumnType("longtext");
+                        .HasColumnType("varchar(15)");
 
-                    b.HasKey("MyProperty");
+                    b.HasKey("Id");
 
                     b.HasIndex("ClienteId");
 
@@ -151,7 +151,7 @@ namespace apicemig.Migrations
                         .HasColumnType("varchar(8)");
 
                     b.Property<decimal>("ValorTotal")
-                        .HasColumnType("decimal(65,30)");
+                        .HasColumnType("decimal(13,2)");
 
                     b.HasKey("Id");
 
@@ -179,7 +179,7 @@ namespace apicemig.Migrations
 
                     b.HasIndex("MedidorId");
 
-                    b.ToTable("Leitura");
+                    b.ToTable("Leituras");
                 });
 
             modelBuilder.Entity("apicemig.Models.DadosContrato.Medidor", b =>
@@ -219,7 +219,7 @@ namespace apicemig.Migrations
                         .HasColumnType("int");
 
                     b.Property<decimal>("ValorPago")
-                        .HasColumnType("decimal(65,30)");
+                        .HasColumnType("decimal(13,2)");
 
                     b.HasKey("Id");
 

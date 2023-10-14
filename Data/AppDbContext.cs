@@ -18,10 +18,11 @@ public class AppDbContext : DbContext
         
     }
     public DbSet<Cliente> Clientes { get; set; }
-    public DbSet<Contato> ContatoClientes { get; set; }
+    public DbSet<Contato> Contatos { get; set; }
     public DbSet<Endereco> Enderecos { get; set; }
     public DbSet<Contrato> Contratos { get; set; }
     public DbSet<Fatura> Faturas { get; set; }
     public DbSet<Medidor> Medidores { get; set; }
     public DbSet<Pagamento> Pagamentos { get; set; }
+    public DbSet<Leitura> Leituras { get; set; }
 }

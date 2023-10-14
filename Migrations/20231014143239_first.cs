@@ -76,11 +76,11 @@ namespace apicemig.Migrations
                 name: "Contratos",
                 columns: table => new
                 {
-                    MyProperty = table.Column<int>(type: "int", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     DataInicio = table.Column<DateTime>(type: "datetime(6)", nullable: false),
                     DataTermino = table.Column<DateTime>(type: "datetime(6)", nullable: false),
-                    TipoContrato = table.Column<string>(type: "longtext", nullable: false)
+                    TipoContrato = table.Column<string>(type: "varchar(15)", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     ConsumoContrato = table.Column<int>(type: "int", nullable: false),
                     StatusContrato = table.Column<string>(type: "varchar(9)", maxLength: 9, nullable: false)
@@ -90,7 +90,7 @@ namespace apicemig.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Contratos", x => x.MyProperty);
+                    table.PrimaryKey("PK_Contratos", x => x.Id);
                     table.ForeignKey(
                         name: "FK_Contratos_Clientes_ClienteId",
                         column: x => x.ClienteId,
@@ -107,7 +107,7 @@ namespace apicemig.Migrations
                 .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateTable(
-                name: "Leitura",
+                name: "Leituras",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -118,9 +118,9 @@ namespace apicemig.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Leitura", x => x.Id);
+                    table.PrimaryKey("PK_Leituras", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Leitura_Medidores_MedidorId",
+                        name: "FK_Leituras_Medidores_MedidorId",
                         column: x => x.MedidorId,
                         principalTable: "Medidores",
                         principalColumn: "Id",
@@ -129,7 +129,7 @@ namespace apicemig.Migrations
                 .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateTable(
-                name: "ContatoClientes",
+                name: "Contatos",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -141,9 +141,9 @@ namespace apicemig.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_ContatoClientes", x => x.Id);
+                    table.PrimaryKey("PK_Contatos", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_ContatoClientes_Enderecos_EnderecoId",
+                        name: "FK_Contatos_Enderecos_EnderecoId",
                         column: x => x.EnderecoId,
                         principalTable: "Enderecos",
                         principalColumn: "Id",
@@ -159,7 +159,7 @@ namespace apicemig.Migrations
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     DataEmissao = table.Column<DateTime>(type: "datetime(6)", nullable: false),
                     DataVencimento = table.Column<DateTime>(type: "datetime(6)", nullable: false),
-                    ValorTotal = table.Column<decimal>(type: "decimal(65,30)", nullable: false),
+                    ValorTotal = table.Column<decimal>(type: "decimal(13,2)", nullable: false),
                     StatusFatura = table.Column<string>(type: "varchar(8)", maxLength: 8, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     ContratoId = table.Column<int>(type: "int", nullable: false)
@@ -171,7 +171,7 @@ namespace apicemig.Migrations
                         name: "FK_Faturas_Contratos_ContratoId",
                         column: x => x.ContratoId,
                         principalTable: "Contratos",
-                        principalColumn: "MyProperty",
+                        principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
@@ -183,7 +183,7 @@ namespace apicemig.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     DataPagamento = table.Column<DateTime>(type: "datetime(6)", nullable: false),
-                    ValorPago = table.Column<decimal>(type: "decimal(65,30)", nullable: false),
+                    ValorPago = table.Column<decimal>(type: "decimal(13,2)", nullable: false),
                     FaturaId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
@@ -199,8 +199,8 @@ namespace apicemig.Migrations
                 .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateIndex(
-                name: "IX_ContatoClientes_EnderecoId",
-                table: "ContatoClientes",
+                name: "IX_Contatos_EnderecoId",
+                table: "Contatos",
                 column: "EnderecoId");
 
             migrationBuilder.CreateIndex(
@@ -225,8 +225,8 @@ namespace apicemig.Migrations
                 column: "ContratoId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Leitura_MedidorId",
-                table: "Leitura",
+                name: "IX_Leituras_MedidorId",
+                table: "Leituras",
                 column: "MedidorId");
 
             migrationBuilder.CreateIndex(
@@ -240,10 +240,10 @@ namespace apicemig.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "ContatoClientes");
+                name: "Contatos");
 
             migrationBuilder.DropTable(
-                name: "Leitura");
+                name: "Leituras");
 
             migrationBuilder.DropTable(
                 name: "Pagamentos");

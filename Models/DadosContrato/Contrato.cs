@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -10,7 +12,7 @@ namespace apicemig.Models.DadosContrato
     {
         [Key]
         [Required]
-        public int MyProperty { get; set; }
+        public int Id { get; set; }
 
         [Required(ErrorMessage = "A data de início é obrigatório")]
         public DateTime DataInicio { get; set; }
@@ -19,6 +21,7 @@ namespace apicemig.Models.DadosContrato
         public DateTime DataTermino { get; set; }
 
         [Required(ErrorMessage = "O tipo do contrato é obrigatório")]
+        [Column(TypeName = "varchar(15)")]
         public string? TipoContrato { get; set; }
 
         [Required(ErrorMessage = "O consumo previsto em contrato é obrigatório")]
@@ -29,7 +32,7 @@ namespace apicemig.Models.DadosContrato
         public string? StatusContrato { get; set; }
 
          public int MedidorId { get; set; }
-        //Informa que a entidade cinema possui uma relação 1-1
+        //Informa que a entidade possui uma relação 1-1
         public virtual Medidor Medidor { get; set; }
         
         [Required]
