@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using apigerenciamentocontrato.Data.DTOs.EnergyMeters;
+using apigerenciamentocontrato.Data.DTOs.EnergyMeters.Response;
 using apigerenciamentocontrato.Services.ContractServices;
 using Microsoft.AspNetCore.Mvc;
 
@@ -24,9 +25,31 @@ public class EnergyMetersController : ControllerBase
     /// <response code="201">Caso inserção seja feita com sucesso</response>
     [HttpPost]
     [ProducesResponseType(StatusCodes.Status201Created)]
-    public void CreateClient([FromBody] CreateEnergyMeters newEnergyMeters)
+    public ResponseEnergyMeters CreateClient([FromBody] CreateEnergyMeters newEnergyMeters)
     {
         //Enviando os dados para a camada de serviço
-        _serviceEnergyMeters.CreateEnergyMeters(newEnergyMeters);
+        var responseEnergyMeters = _serviceEnergyMeters.CreateEnergyMeters(newEnergyMeters);
+
+        return responseEnergyMeters;
     }
+
+   [HttpGet]
+   public List<ResponseEnergyMeters> GetResponseEnergyMeters()
+   {
+      return _serviceEnergyMeters.ListEnergyMeters();
+   }
+
+   [HttpGet("{id:int}")]
+   public ResponseEnergyMeters GetEnergyMeters([FromRoute] int id)
+   {
+      //Solicitando ao serviço que busque um cliente pelo id e realizando o retorno
+      return _serviceEnergyMeters.SearcEnergyMetersForId(id);
+   }
+
+   [HttpDelete("{id:int}")]
+   public void DeleteEnergyMeters ([FromRoute] int id)
+   {
+      //Mandando o serviço excluir
+      _serviceEnergyMeters.RemoveEnergyMeters(id);
+   }
 }

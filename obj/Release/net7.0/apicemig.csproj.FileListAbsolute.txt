@@ -5,8 +5,6 @@ C:\Users\raina\OneDrive\areadetrabalho\apigerenciamentocontrato\bin\Release\net7
 C:\Users\raina\OneDrive\areadetrabalho\apigerenciamentocontrato\bin\Release\net7.0\apicemig.runtimeconfig.json
 C:\Users\raina\OneDrive\areadetrabalho\apigerenciamentocontrato\bin\Release\net7.0\apicemig.dll
 C:\Users\raina\OneDrive\areadetrabalho\apigerenciamentocontrato\bin\Release\net7.0\apicemig.pdb
-C:\Users\raina\OneDrive\areadetrabalho\apigerenciamentocontrato\bin\Release\net7.0\AutoMapper.dll
-C:\Users\raina\OneDrive\areadetrabalho\apigerenciamentocontrato\bin\Release\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\raina\OneDrive\areadetrabalho\apigerenciamentocontrato\bin\Release\net7.0\Humanizer.dll
 C:\Users\raina\OneDrive\areadetrabalho\apigerenciamentocontrato\bin\Release\net7.0\Microsoft.AspNetCore.OpenApi.dll
 C:\Users\raina\OneDrive\areadetrabalho\apigerenciamentocontrato\bin\Release\net7.0\Microsoft.EntityFrameworkCore.dll
@@ -43,13 +41,3 @@ C:\Users\raina\OneDrive\areadetrabalho\apigerenciamentocontrato\obj\Release\net7
 C:\Users\raina\OneDrive\areadetrabalho\apigerenciamentocontrato\obj\Release\net7.0\apicemig.pdb
 C:\Users\raina\OneDrive\areadetrabalho\apigerenciamentocontrato\obj\Release\net7.0\apicemig.genruntimeconfig.cache
 C:\Users\raina\OneDrive\areadetrabalho\apigerenciamentocontrato\obj\Release\net7.0\ref\apicemig.dll
-C:\Users\raina\OneDrive\areadetrabalho\apigerenciamentocontrato\bin\Release\net7.0\out\web.config
-C:\Users\raina\OneDrive\areadetrabalho\apigerenciamentocontrato\bin\Release\net7.0\out\apicemig.deps.json
-C:\Users\raina\OneDrive\areadetrabalho\apigerenciamentocontrato\bin\Release\net7.0\out\apicemig.runtimeconfig.json
-C:\Users\raina\OneDrive\areadetrabalho\apigerenciamentocontrato\bin\Release\net7.0\out\appsettings.Development.json
-C:\Users\raina\OneDrive\areadetrabalho\apigerenciamentocontrato\bin\Release\net7.0\out\appsettings.json
-C:\Users\raina\OneDrive\areadetrabalho\apigerenciamentocontrato\bin\Release\net7.0\out\out\web.config
-C:\Users\raina\OneDrive\areadetrabalho\apigerenciamentocontrato\bin\Release\net7.0\out\out\apicemig.deps.json
-C:\Users\raina\OneDrive\areadetrabalho\apigerenciamentocontrato\bin\Release\net7.0\out\out\apicemig.runtimeconfig.json
-C:\Users\raina\OneDrive\areadetrabalho\apigerenciamentocontrato\bin\Release\net7.0\out\out\appsettings.Development.json
-C:\Users\raina\OneDrive\areadetrabalho\apigerenciamentocontrato\bin\Release\net7.0\out\out\appsettings.json

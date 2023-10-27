@@ -21,7 +21,7 @@ namespace apicemig.Models
 
         [Required(ErrorMessage = "O CPF é obrigatório")]
         [MaxLength(11, ErrorMessage = "O CPF é inválido")]
-        public int Cpf { get; set; }
+        public string Cpf { get; set; }
 
         [Required(ErrorMessage = "A data de nascimento é obrigatório")]
         public DateTime DataNascimento { get; set; }

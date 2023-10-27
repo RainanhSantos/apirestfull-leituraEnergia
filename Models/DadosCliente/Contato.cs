@@ -18,7 +18,7 @@ public class Contato
 
     [Required(ErrorMessage = "O E-mail é obrigatório")]
     [MaxLength(40, ErrorMessage = "Limite de caracteres excedido")]
-    public string? Email { get; set; }
+    public string Email { get; set; }
     
     [Required]
     public int EnderecoId { get; set; }

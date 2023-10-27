@@ -22,14 +22,14 @@ namespace apicemig.Models.DadosContrato
 
         [Required(ErrorMessage = "O tipo do contrato é obrigatório")]
         [Column(TypeName = "varchar(15)")]
-        public string? TipoContrato { get; set; }
+        public string TipoContrato { get; set; }
 
         [Required(ErrorMessage = "O consumo previsto em contrato é obrigatório")]
         public int ConsumoContrato { get; set; }
 
         [Required(ErrorMessage = "O status do contrato é obrigatório")]
         [MaxLength(9, ErrorMessage = "Limite de caracteres excedido")]
-        public string? StatusContrato { get; set; }
+        public string StatusContrato { get; set; }
 
          public int MedidorId { get; set; }
         //Informa que a entidade possui uma relação 1-1

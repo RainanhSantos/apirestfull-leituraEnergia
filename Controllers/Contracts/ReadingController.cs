@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using apigerenciamentocontrato.Data.DTOs.Reading;
+using apigerenciamentocontrato.Data.DTOs.Reading.Response;
 using apigerenciamentocontrato.Services.ContractServices;
 using Microsoft.AspNetCore.Mvc;
 
@@ -24,9 +25,31 @@ public class ReadingController
     /// <response code="201">Caso inserção seja feita com sucesso</response>
     [HttpPost]
     [ProducesResponseType(StatusCodes.Status201Created)]
-    public void CreateClient([FromBody] CreateReading newReading)
+    public ResponseReading CreateClient([FromBody] CreateReading newReading)
     {
         //Enviando os dados para a camada de serviço
-        _serviceReading.CreateReading(newReading);
-    }   
+        var responseReading = _serviceReading.CreateReading(newReading);
+
+        return responseReading;
+    }
+
+   [HttpGet]
+   public List<ResponseReading> GetResponseReadings()
+   {
+      return _serviceReading.ListReading();
+   }
+
+   [HttpGet("{id:int}")]
+   public ResponseReading GetReading([FromRoute] int id)
+   {
+      //Solicitando ao serviço que busque um cliente pelo id e realizando o retorno
+      return _serviceReading.SearcReadingForId(id);
+   }
+
+   [HttpDelete("{id:int}")]
+   public void DeleteReading ([FromRoute] int id)
+   {
+      //Mandando o serviço excluir
+      _serviceReading.RemoveReading(id);
+   }
 }

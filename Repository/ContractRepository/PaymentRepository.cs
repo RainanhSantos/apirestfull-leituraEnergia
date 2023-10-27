@@ -15,11 +15,39 @@ public class PaymentRepository
     {
         _context = context;
     }
-    public void CreatePayment(Pagamento payment)
+    public Pagamento CreatePayment(Pagamento payment)
     {
         //Salvar o cliente o cliente no context
         _context.Pagamentos.Add(payment);
         _context.SaveChanges();
 
+        return payment;
+
     }
+
+    public List<Pagamento> ListPayments()
+    {
+        return _context.Pagamentos.ToList();
+    }
+
+    public Pagamento SearcPaymentForId(int id)
+    {
+        return _context.Pagamentos.FirstOrDefault(Cliente => Cliente.Id == id);
+    }
+
+    public void RemovePayment(Pagamento payment)
+    {
+        //Removendo do contexto
+        _context.Remove(payment);
+
+        //Salvando as mudanças no banco de dados
+        _context.SaveChanges();
+    }
+
+    public void UpdatePayment()
+    {
+        //SAlvando qualquer atualização feita no banco de dados
+        _context.SaveChanges();
+    }
+
 }

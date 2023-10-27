@@ -23,7 +23,8 @@ namespace apicemig.Migrations
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     Nome = table.Column<string>(type: "varchar(60)", maxLength: 60, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    Cpf = table.Column<int>(type: "int", maxLength: 11, nullable: false),
+                    Cpf = table.Column<string>(type: "varchar(11)", maxLength: 11, nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
                     DataNascimento = table.Column<DateTime>(type: "datetime(6)", nullable: false)
                 },
                 constraints: table =>
@@ -157,8 +158,6 @@ namespace apicemig.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    DataEmissao = table.Column<DateTime>(type: "datetime(6)", nullable: false),
-                    DataVencimento = table.Column<DateTime>(type: "datetime(6)", nullable: false),
                     ValorTotal = table.Column<decimal>(type: "decimal(13,2)", nullable: false),
                     StatusFatura = table.Column<string>(type: "varchar(8)", maxLength: 8, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),

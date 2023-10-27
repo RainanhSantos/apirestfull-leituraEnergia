@@ -16,7 +16,7 @@ namespace apicemig.Models.DadosContrato
         public int NumeroSerie { get; set; }
 
         [Required(ErrorMessage = "O tipo do medidor é obrigatório")]
-        public String? TipoMedidor { get; set; }
+        public String TipoMedidor { get; set; }
 
         [Required(ErrorMessage = "A data de instalação é obrigatória")]
         public DateTime DataInstalacao { get; set; }

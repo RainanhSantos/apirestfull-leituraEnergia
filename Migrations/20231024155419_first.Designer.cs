@@ -11,7 +11,7 @@ using apicemig.Data;
 namespace apicemig.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20231014143239_first")]
+    [Migration("20231024155419_first")]
     partial class first
     {
         /// <inheritdoc />
@@ -28,9 +28,10 @@ namespace apicemig.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<int>("Cpf")
+                    b.Property<string>("Cpf")
+                        .IsRequired()
                         .HasMaxLength(11)
-                        .HasColumnType("int");
+                        .HasColumnType("varchar(11)");
 
                     b.Property<DateTime>("DataNascimento")
                         .HasColumnType("datetime(6)");
@@ -141,12 +142,6 @@ namespace apicemig.Migrations
 
                     b.Property<int>("ContratoId")
                         .HasColumnType("int");
-
-                    b.Property<DateTime>("DataEmissao")
-                        .HasColumnType("datetime(6)");
-
-                    b.Property<DateTime>("DataVencimento")
-                        .HasColumnType("datetime(6)");
 
                     b.Property<string>("StatusFatura")
                         .IsRequired()
@@ -325,14 +320,12 @@ namespace apicemig.Migrations
 
             modelBuilder.Entity("apicemig.Models.DadosContrato.Fatura", b =>
                 {
-                    b.Navigation("Pagamento")
-                        .IsRequired();
+                    b.Navigation("Pagamento");
                 });
 
             modelBuilder.Entity("apicemig.Models.DadosContrato.Medidor", b =>
                 {
-                    b.Navigation("Contrato")
-                        .IsRequired();
+                    b.Navigation("Contrato");
 
                     b.Navigation("Leitura");
                 });

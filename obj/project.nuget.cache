@@ -1,14 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "Zr4vj+1tpekx/3tkBd0c+mfznQkKNshrKaoLKGy3iG2QdwfigFmXL6lcNJSDTS6o+vWIqeOY56obgDX1RQOysg==",
+  "dgSpecHash": "tMoBcnzF7VkaOvaWlxkbOB8ZHOz+H9Z/6JDWzMhojddFpVKeQvETCBcshp0+Td11pwldnhd6zbSSeqYLyjNFlQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\raina\\OneDrive\\areadetrabalho\\apigerenciamentocontrato\\apicemig.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\raina\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
-    "C:\\Users\\raina\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "C:\\Users\\raina\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\raina\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.5\\microsoft.aspnetcore.openapi.7.0.5.nupkg.sha512",
-    "C:\\Users\\raina\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\raina\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.12\\microsoft.entityframeworkcore.7.0.12.nupkg.sha512",
     "C:\\Users\\raina\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.12\\microsoft.entityframeworkcore.abstractions.7.0.12.nupkg.sha512",
     "C:\\Users\\raina\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\7.0.12\\microsoft.entityframeworkcore.analyzers.7.0.12.nupkg.sha512",

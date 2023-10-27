@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using apigerenciamentocontrato.Data.DTOs.Invoice;
+using apigerenciamentocontrato.Data.DTOs.Invoice.Response;
 using apigerenciamentocontrato.Services.ContractServices;
 using Microsoft.AspNetCore.Mvc;
 
@@ -24,9 +25,32 @@ public class InvoiceController
     /// <response code="201">Caso inserção seja feita com sucesso</response>
     [HttpPost]
     [ProducesResponseType(StatusCodes.Status201Created)]
-    public void CreateClient([FromBody] CreateInvoice newInvoice)
+    public ResponseInvoice CreateClient([FromBody] CreateInvoice newInvoice)
     {
         //Enviando os dados para a camada de serviço
-        _serviceInvoice.CreateInvoice(newInvoice);
+        var responseInvoice = _serviceInvoice.CreateInvoice(newInvoice);
+
+        return responseInvoice;
     }
+
+   [HttpGet]
+   public List<ResponseInvoice> GetResponseInvoices()
+   {
+      return _serviceInvoice.ListEnergyMeters();
+   }
+
+   [HttpGet("{id:int}")]
+   public ResponseInvoice GetInvoice([FromRoute] int id)
+   {
+      //Solicitando ao serviço que busque um cliente pelo id e realizando o retorno
+      return _serviceInvoice.SearcInvoiceForId(id);
+   }
+
+   [HttpDelete("{id:int}")]
+   public void DeleteInvoice ([FromRoute] int id)
+   {
+      //Mandando o serviço excluir
+      _serviceInvoice.RemoveInvoice(id);
+   }
+
 }

@@ -15,11 +15,39 @@ public class ReadingRepository
     {
         _context = context;
     }
-    public void CreatePayment(Leitura reading)
+    public Leitura CreatePayment(Leitura reading)
     {
         //Salvar o cliente o cliente no context
         _context.Leituras.Add(reading);
         _context.SaveChanges();
 
+        return reading;
+
     }
+
+    public List<Leitura> ListReadings()
+    {
+        return _context.Leituras.ToList();
+    }
+
+    public Leitura SearcReadingForId(int id)
+    {
+        return _context.Leituras.FirstOrDefault(Cliente => Cliente.Id == id);
+    }
+
+    public void RemoveReading(Leitura reading)
+    {
+        //Removendo do contexto
+        _context.Remove(reading);
+
+        //Salvando as mudanças no banco de dados
+        _context.SaveChanges();
+    }
+
+    public void UpdateReading()
+    {
+        //SAlvando qualquer atualização feita no banco de dados
+        _context.SaveChanges();
+    }
+
 }

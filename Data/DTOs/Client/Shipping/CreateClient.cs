@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace apigerenciamentocontrato.Data.DTOs.Procedure
 {
-    public class ReadClient
+    public class CreateClient
     {
-        public string? Nome { get; set; }
+        public string Nome { get; set; }
+        public string Cpf { get; set; }
         public DateTime DataNascimento { get; set; }
     }
 }
