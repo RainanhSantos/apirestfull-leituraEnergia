@@ -51,4 +51,13 @@ public class ContractController : ControllerBase
       //Mandando o serviço excluir
       _serviceContract.RemoveContract(id);
    }
+
+   [HttpPut("{id:int}")]
+   public ResponseContract PutContract([FromRoute] int id, [FromBody] CreateContract contractEdited)
+   {
+      //Enviando para o serviço editar
+      var responseContract = _serviceContract.UpdateContract(id, contractEdited);
+
+      return responseContract;
+   }
 }

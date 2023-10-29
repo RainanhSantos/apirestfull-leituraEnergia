@@ -52,4 +52,13 @@ public class EnergyMetersController : ControllerBase
       //Mandando o serviço excluir
       _serviceEnergyMeters.RemoveEnergyMeters(id);
    }
+
+   [HttpPut("{id:int}")]
+   public ResponseEnergyMeters PutEnergyMeters([FromRoute] int id, [FromBody] CreateEnergyMeters energyMetersEdited)
+   {
+      //Enviando para o serviço editar
+      var responseEnergyMeters = _serviceEnergyMeters.UpdateEnergyMeters(id, energyMetersEdited);
+
+      return responseEnergyMeters;
+   }
 }

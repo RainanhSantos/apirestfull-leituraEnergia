@@ -53,4 +53,13 @@ public class PaymentController
       _servicePayment.RemovePayment(id);
    }
 
+   [HttpPut("{id:int}")]
+   public ResponsePayment PutPayment([FromRoute] int id, [FromBody] CreatePayment paymentEdited)
+   {
+      //Enviando para o serviço editar
+      var responsePayment = _servicePayment.UpdatePayment(id, paymentEdited);
+
+      return responsePayment;
+   }
+
 }

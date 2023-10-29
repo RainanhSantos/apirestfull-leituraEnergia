@@ -52,4 +52,13 @@ public class ReadingController
       //Mandando o serviço excluir
       _serviceReading.RemoveReading(id);
    }
+
+   [HttpPut("{id:int}")]
+   public ResponseReading PutReading([FromRoute] int id, [FromBody] CreateReading readingEdited)
+   {
+      //Enviando para o serviço editar
+      var responseReading = _serviceReading.UpdateReading(id, readingEdited);
+
+      return responseReading;
+   }
 }

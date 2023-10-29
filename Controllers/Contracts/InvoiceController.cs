@@ -53,4 +53,13 @@ public class InvoiceController
       _serviceInvoice.RemoveInvoice(id);
    }
 
+   [HttpPut("{id:int}")]
+   public ResponseInvoice PutInvoice([FromRoute] int id, [FromBody] CreateInvoice invoiceEdited)
+   {
+      //Enviando para o serviço editar
+      var responseInvoice = _serviceInvoice.UpdateInvoice(id, invoiceEdited);
+
+      return responseInvoice;
+   }
+
 }
